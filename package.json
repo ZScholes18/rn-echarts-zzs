@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ZScholes18/rn-echarts/issues"
   },
-  "homepage": "https://github.com/ZScholes18/rn-echarts#readme"
+  "homepage": "https://github.com/ZScholes18/rn-echarts#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
