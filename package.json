@@ -1,21 +1,16 @@
 {
   "name": "rn-ecahrts",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "react native echarts component base on Webview",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZScholes18/rn-echarts.git"
+    "url": "git+ssh://git@github.com/ZScholes18/rn-echarts.git"
   },
-  "keywords": [
-    "rn",
-    "react-native",
-    "echarts"
-  ],
-  "author": "zshcoles18",
+  "author": "zschoels18",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ZScholes18/rn-echarts/issues"
