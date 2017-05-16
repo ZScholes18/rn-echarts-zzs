@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >  
+    <script src="./js/echarts.min.js"></script>
+</head>
+<style type="text/css">
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        /*overflow: hidden;*/
+    }
+    
+    #main {
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div id="main"></div>
+</body>
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+
+    var option = {};
+    var objNum = 0
+    var funcReg = /^function/;
+
+    document.addEventListener('message', function (e) {
+        var data = JSON.parse(e.data);
+        var params = [];
+
+        if (data.type == 'setOption') {
+            myChart.clear();
+        }
+        for (var i = 0; i < data.params.length; i++) {
+            if (funcReg.test(data.params[i])) {
+                var func = (new Function('return ' + data.params[i]))()
+                params.push(func);
+            }
+            else {
+                params.push(data.params[i]);
+            }
+
+        }
+        myChart[data.type].apply(myChart, params);
+
+    });
+    window.addEventListener("resize", function () {
+        myChart.resize();
+    });
+
+</script>
+
+</html>
