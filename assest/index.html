@@ -31,9 +31,15 @@
     var option = {};
     var objNum = 0
     var funcReg = /^function/;
-
+    function getFunction(k,v) {
+        if(funcReg.test(v)) {
+            var func = new Function('return '+v)
+            return func();
+        }
+        return v;
+    }
     document.addEventListener('message', function (e) {
-        var data = JSON.parse(e.data);
+        data = JSON.parse(e.data,getFunction);
         var params = [];
 
         if (data.type == 'setOption') {
@@ -47,7 +53,6 @@
             else {
                 params.push(data.params[i]);
             }
-
         }
         myChart[data.type].apply(myChart, params);
 
