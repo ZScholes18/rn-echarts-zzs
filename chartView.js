@@ -6,7 +6,7 @@ import {
     Platform
 } from 'react-native';
 const resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource.js');
-import _ from 'lodash'
+import _ from 'lodash';
 
 /*
     transeform json to string
@@ -77,7 +77,7 @@ export default class ChartView extends PureComponent {
         if (__DEV__) {
             source = require('./assest/index.html');
         } else {
-            source = { uri: 'file:///android_asset/echarts/assest/index.html' };
+            source = { uri: 'file:///android_asset/echarts/assets/index.html' };
         }
 
         return source;
