@@ -7,6 +7,12 @@ import {
 } from 'react-native';
 const resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource.js');
 import _ from 'lodash'
+
+/*
+    transeform json to string
+    copy from 
+    https://github.com/somonus/react-native-echarts/blob/master/src/util/toString.js 
+*/
 function toString(obj) {
     return JSON.stringify(obj, function (key, val) {
         if (typeof val === 'function') {
