@@ -6,7 +6,10 @@ import {
     Platform
 } from 'react-native';
 const resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource.js');
-import _ from 'lodash'
+import _ from 'lodash';
+
+// transform object to string
+//copy from https://github.com/somonus/react-native-echarts
 function toString(obj) {
     return JSON.stringify(obj, function (key, val) {
         if (typeof val === 'function') {
@@ -71,7 +74,7 @@ export default class ChartView extends PureComponent {
         if (__DEV__) {
             source = require('./assest/index.html');
         } else {
-            source = { uri: 'file:///android_asset/echarts/assest/index.html' };
+            source = { uri: 'file:///android_asset/echarts/assets/index.html' };
         }
 
         return source;
