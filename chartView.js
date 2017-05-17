@@ -13,7 +13,7 @@ function toString(obj) {
             return `~--demo--~${val}~--demo--~`;
         }
         return val;
-    }).replace('\"~--demo--~', '').replace('~--demo--~\"', '').replace(/\\n/g, '');
+    }).replace('~--demo--~', '').replace('~--demo--~', '').replace(/\\n/g, '');
 }
 
 export default class ChartView extends PureComponent {
@@ -29,7 +29,7 @@ export default class ChartView extends PureComponent {
         };
         var _this = this;
         var action = function () {
-            _this.webView.postMessage(JSON.stringify(data));
+            _this.webView.postMessage(toString(data));
         };
         if (!this.isLoaded) {
             this.eventsQueue.push(action);
@@ -43,10 +43,10 @@ export default class ChartView extends PureComponent {
         this.postMessage.call(this, 'setOption', [option]);
     }
     on(name, handle) {
-        this.postMessage.call(this, 'on', [name, toString(handle)]);
+        this.postMessage.call(this, 'on', [name, handle]);
     }
     off(name, handle) {
-        this.postMessage.call(this, 'off', [name, toString(handle)]);
+        this.postMessage.call(this, 'off', [name, handle]);
     }
     dispatchAction(params) {
         this.postMessage.call(this, 'dispatchAction', [params]);
