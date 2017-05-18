@@ -7,6 +7,7 @@ import {
 
 import { StackNavigator } from 'react-navigation';
 import SimpleExample from './simpleExample';
+import AdvanceExample from './advanceExample';
 
 class Home extends Component {
     static navigationOptions = {
@@ -20,6 +21,10 @@ class Home extends Component {
                     onPress={() => navigate('SimpleExample')}
                     title="SimpleExample"
                 />
+                 <Button
+                    onPress={() => navigate('AdvanceExample')}
+                    title="AdvanceExample"
+                />
             </View>
         )
     }
@@ -27,7 +32,8 @@ class Home extends Component {
 
 const SimpleApp = StackNavigator({
     Home: { screen: Home },
-    SimpleExample: { screen: SimpleExample }
+    SimpleExample: { screen: SimpleExample },
+    AdvanceExample:{screen:AdvanceExample}
 });
 
 export default SimpleApp;
