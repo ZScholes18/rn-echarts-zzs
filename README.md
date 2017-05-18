@@ -1,10 +1,10 @@
-# rn-echarts
+# rn-echarts-zzs
 Baidu Echarts for react-native depends on the propties onMessage&amp;&amp;postMessage of the component WebView  
 react-native version >= 0.40
 
 ## propties
 * option
-* View propties
+* other View propties
 
 ## methods
 * setOption
@@ -12,8 +12,34 @@ react-native version >= 0.40
 * off
 * dispatchAction 
 
-## Useage
+## Install
+npm install rn-echarts-zzs --save
 
-<code>
-    
-</code>
+## Usage
+
+```javascript 
+import React, { Component } from 'react';
+import {
+    View
+} from 'react-native';
+import styles from './styles';
+import ChartView from './rn-echarts/index';
+import { StackNavigator } from 'react-navigation';
+import { barOption } from './data';
+
+export default class SimpleExample extends Component {
+    static navigationOptions = {
+        title: 'SimpleExample',
+    };
+    render() {
+        return (
+            <View style={styles.container}>
+                <ChartView
+                    ref={(c) => this.chart = c}
+                    option={barOption}
+                />
+            </View>
+        );
+    }
+}
+```

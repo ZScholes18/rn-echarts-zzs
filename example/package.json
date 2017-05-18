@@ -9,8 +9,7 @@
   "dependencies": {
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
-    "react-navigation": "^1.0.0-beta.9",
-    "rn-ecahrts": "file:///C:\\Users\\zscholes18\\Documents\\GitHub\\rn-echarts"
+    "react-navigation": "^1.0.0-beta.9"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",

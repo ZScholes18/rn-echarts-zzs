@@ -1,6 +1,6 @@
 {
-  "name": "rn-echarts",
-  "version": "0.0.1",
+  "name": "rn-echarts-zzs",
+  "version": "0.1.0",
   "description": "react native echarts component base on Webview",
   "main": "index.js",
   "scripts": {
