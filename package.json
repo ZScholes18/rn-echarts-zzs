@@ -1,11 +1,17 @@
 {
   "name": "rn-echarts-zzs",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "react native echarts component base on Webview",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
+  "keywords": [
+    "react-native",
+    "react native",
+    "echarts",
+    "chart"
+  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/ZScholes18/rn-echarts.git"
