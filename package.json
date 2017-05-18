@@ -1,5 +1,5 @@
 {
-  "name": "rn-ecahrts",
+  "name": "rn-echarts",
   "version": "0.0.1",
   "description": "react native echarts component base on Webview",
   "main": "index.js",
