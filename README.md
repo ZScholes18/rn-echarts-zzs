@@ -4,6 +4,7 @@ react-native version >= 0.40
 
 ## propties
 * option
+* onMessage
 * other View propties
 
 ## methods
